@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* let const var */
+
+        var num = 4;
+        var name = 'John';
+
+        num = 5;
+
+        console.log('Number: ', num);
+
+        let count = 4;
+
+        console.log(count);
+
+        count = 5;
+
+        console.log(count);
+
+
+        const i = 42;
+
+        console.log(i);
+
+        // i = 3;
+
+        // console.log(i);
+
+        const person = {
+            name: "\"John\"",
+            age: '25'
+        };
+
+        // person = "Ivan";
+
+        // console.log(person.name);
+
+
+        // Однострочной
+
+        /*
+            Многострочный
+            комментарий
+        */
+
+        let num1 = 4;
+        let num2 = -5.25;
+
+        console.log(num1, num2);
+
+        // Именование переменных
+
+        let _firstName = "Kate";
+        let lastName = "Conor";
+        let first_name = 'Ivan';
+        const SECTION_FIRST = '.section--first';
+
+        let hello = `
+            Hello, ${_firstName},
+            My frind!
+        `;
+
+        console.log(hello);
+
+        let result = true;
+        result = false;
+
+        // Null
+
+        let home = null;
+
+        // Undefined
+
+        let a;
+
+        console.log('a', a);
+
+        function red() {
+            a = 4;
+        }
+
+
+        let b = red();
+
+        console.log('b', b);
+
+        let man = {
+            name: 'Ivan',
+            age: 25,
+            isMale: true,
+            hello: function() {
+                console.log(`Hello, ${this.name}!`);
+            }
+        };
+
+        console.log(man.name, man.age, man.isMale);
+        man.hello();
+
+        // Операторы
+
+        // Унарные
+
+        let c1 = +3;
+        let c2 = -3;
+
+        let c3 = ++c1;
+        let c4 = c2--;
+
+        let c5 = !true;
+
+        console.log(c3, c4, c5);
+
+        // Бинарные
+
+        let ex = (3 + 5) * 7 - 6 * 5;
+
+        let d = 4;
+
+        d += 5; // d = d + 5;
+        d -= 3;
+        d *= 5;
+
+        let e = 5 > 3 && 5 < 7; // true
+        e = 5 < 3 && 5 < 7; // false
+
+        e = 5 > 3 || 5 < 7; // true
+        e = 5 > 8 || 5 < 7; // true
+
+        // Тернарный
+
+        let res = 5 > 7 ? 42 : 24;
+
+        console.log('Result', res);
+
+        // alert('Hello!');
+
+        // let name3 = prompt('Enter X: ');
+        // console.log('Prompt ', name3);
+
+        // let res3 = confirm('Is Javascript best language?');
+        // console.log(res3);
+
+        let x = prompt('Enter X:');
+        x = parseInt(x);
+
+        console.log(x);
+
+
+
+    </script>
+</body>
+</html>
