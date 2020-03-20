@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-if-else</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        // let asd = 123;
+        // console.log(typeof asd);
+
+        // asd = new Number(42);
+        // console.log(typeof asd);
+
+        // Нужно преобразовать строки в числа!!!! 
+        // let a = prompt('Enter a:');
+        // num = parseFloat(num);
+        // let b = prompt('Enter b:');
+        // let c = a + b;
+        // console.log(c);
+
+        // Количество цифр после запятой
+        // let number1 = prompt('Enter number:');
+        // let num = new Number(number1);
+        // console.log(num.toFixed(3));
+
+        // Вывод числа из объекта
+        // let number1 = prompt('Enter number:');
+        // let num = new Number(number1);
+        // console.log(num.valueOf());
+
+        /*
+            Объект Math
+        */
+
+        // let num = prompt('Enter number');
+        // num = new Number(num);
+        // num = num.valueOf();
+
+        // Округление
+        // console.log(num);
+        // console.log('Math.trunc()', Math.trunc(num));
+        // console.log('Math.ceil()', Math.ceil(num));
+        // console.log('Math.floor()', Math.floor(num));
+        // console.log('Math.round()', Math.round(num));
+
+        // Random
+        // let rand = Math.random();
+        // console.log(rand);
+        // console.log(Math.trunc(rand * 100));
+        // true или false 
+        // console.log(Math.trunc(rand * 2));
+
+
+        /*
+            BOOLEAN
+        */
+
+        // let a = 5;
+        // let b = 10;
+        // let result = a < b;
+        // let result = a > b;
+        // let result = a <= b;
+        // let result = a >= b;
+        // let result = a == b;
+        // let result = a === b; <- Использовать только это
+        // let result = a != b;
+        // let result = a !== b; <- Использовать только это
+        // let result = !a;
+
+        let a = 15;
+        let b = 'name';
+
+        if (a === 15) {
+            console.log(15);
+        }
+
+        if (a > 10) {
+            console.log("Ok");
+        } else {
+            console.log('Никогда не выполнится');
+        }
+
+        a = +prompt('Enter a:');
+        console.log(a);
+
+        if (a < 0) {
+            console.log('0 <');
+        } else if (a === 0) {
+            console.log('0');
+        } else {
+            console.log('> 0');
+        }
+
+        if (a) {
+            console.log('not a zero');
+        } else {
+            console.log('zero');
+        }
+
+        /*
+            FALSE - 0, null, undefined, "", NaN, false
+            TRUE - other
+        */
+
+        /*
+            Преобразование строки к числу
+            let num = +'123.345';
+            parseInt('123')
+            parseFloat('123.45')
+            new Number('1234') 
+        */
+
+        /*
+            Преобразование числа к строке
+            let str = "" + 123;
+            new String(123)
+            Number(123).toString();
+        */
+
+        let name = 'Kate';
+
+        switch (name) {
+            case 'Ivan' :
+                console.log("How are you?");
+                break;
+
+            case 'Kate' :
+                console.log('Hi!!');
+                break;
+
+            default:
+                console.log('Unknown user');
+                break;
+        }
+
+
+
+    </script>
+</body>
+</html>
