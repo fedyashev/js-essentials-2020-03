@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-string</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // let arr = new Array(4);
+        // for (let i = 0; i < arr.length; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100);
+        // }
+
+        // console.log(arr);
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     for (let j = i; j < arr.length; j++) {
+        //         console.log(i, j);
+        //     }
+        // }
+
+        // let str1 = 'single';
+        // let str2 = "double";
+        // let str3 = `
+        //     ssjhdfskdfg
+        //     ${str2}
+        // `;
+        // let str4 = new String(12345);
+        // console.log(str3);
+
+        // Длина строки
+        // let str = 'Hello, World!';
+        // console.log(str.length);
+
+        //  Экранирующие символы
+        // let str = '&\nHello\\\'He\tllo\'';
+        // console.log(str);
+
+        // Concatination
+        // let str1 = 'Hello, ';
+        // let str2 = 'World!';
+        // console.log(str1.concat(str2));
+        // console.log(str1 + str2);
+
+        // let str = 'Hello, World!';
+        // console.log(str.charAt(7));
+        // console.log(str[7]);
+        // str[7] = 'E'; // Error
+        // console.log(str);
+
+        // let str = 'Hello, World!';
+        // console.log(str.substring(0, 5)); // [0, 5)
+        // console.log(str.substring(7));
+
+        // let str = 'Hello, World!';
+        // console.log(str.slice(3, -2));
+
+        // let data = 'STRUCTURE_IN:Зарплата';
+        // let mas = data.split(':');
+        // console.log(mas);
+        // console.log(mas.join('---'));
+
+        // let str = '   "123 sdasd"   \t  ';
+        // console.log(str.trim());
+
+        // let str = 'Hello, World!';
+        // console.log(str.toLowerCase());
+        // console.log(str.toUpperCase());
+
+    
+        // let str = 'Hello, Wolrd! +375(29)123-45-67 Телефон';
+        // let pattern = /\+\d+\(\d+\)\d+-\d+-\d+/;
+        // console.log(str.match(pattern));
+        // console.log(str.search(pattern));
+        // console.log(str.replace(pattern, 'OK!'));
+
+        let date = new Date(2020, 1, 28);
+        console.log(date.getTime());
+
+        date = new Date();
+        console.log(date.getTime());
+
+        date = new Date(1969, 11, 1);
+        console.log(date.getTime());
+
+        let timestamp = Date.now();
+        console.log(timestamp);
+
+        date = new Date();
+        console.log(date);
+        console.log(date.toString());
+
+        let str = `${date.getDate()}.${date.getMonth() <= 9 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}.${date.getFullYear()}`;
+        console.log(str);
+
+
+        let t1 = Date.now();
+        let arr = new Array(10000000);
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i; j < arr.lengthl; j++) {
+                arr[i] = Math.floor(Math.random() * j);
+            }
+        }
+        let t2 = Date.now();
+        console.log(t2 - t1);
+
+
+    </script>
+</body>
+</html>
