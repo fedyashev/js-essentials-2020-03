@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-valid</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let password = prompt('Введите ваш пароль:');
+        let pattern = /[A-Z]/g;
+        pattern = password.search(pattern);
+
+        let pattern1 = /[a-z]/g;
+        pattern1 = password.search(pattern1);
+
+        let pattern2 = /\d/g;
+        pattern2 = password.search(pattern2);
+
+        let pattern3 = /[\.\,\+\@\_\=\-]/g;
+        pattern3 = password.search(pattern3);
+
+        let space = /\s/;
+        space = password.search(space);
+
+        let pattern4 = /[\.\,\+\@\_\=\-]{2}/g;
+        pattern4 = password.search(pattern4);
+
+        
+        
+        if (password.length >= 8 && pattern !== -1 && pattern1 !== -1 && pattern2 !== -1 && pattern3 !== -1 && space === -1 && pattern4 === -1) {
+            alert('Пароль принят');
+        } else {
+            alert('Неправильная форма пароля. Введите валидный пароль');
+        }
+
+
+        let result = true;
+        result &= password.search(space) === -1;
+        result &= password.search(pattern) !== -1;
+        result &= password.search(pattern1) !== -1;
+        result &= password.search(pattern2) !== -1;
+        result &= password.search(pattern3) !== -1;
+        result &= password.search(pattern4) === -1;
+
+        if (result) {
+            alert('Пароль принят');
+        } else {
+            alert('Неправильная форма пароля. Введите валидный пароль');
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-function</title>
+</head>
+<body>
+
+    <button class="btnClick active">Click</button>
+
+    <script>
+        'use script';
+
+        // function hello(name, age, color) {
+        //     console.log(`${name} ${age} ${color}`);
+        // }
+        // hello('Ivan', 25, 'red');
+
+        // let hello = function hi(message) {
+        //     let msg = 'Hello, ' + message;
+        //     return msg;
+        // }
+        // let str = hello('World!');
+
+        // Ананимные функции
+        // let arr = Array(5).fill(0).map(function(item) {
+        //     return Math.floor(Math.random() * 100);
+        // });
+        // console.log(arr);
+
+        // Стрелочные функции
+        // let arr = Array(5).fill(0).map(item => {
+        //     return Math.floor(Math.random() * 100);
+        // });
+        // console.log(arr);
+
+        // let hi = msg => {
+        //     console.log('Hello, ' + msg);
+        // };
+
+        // function name() {
+        //     console.log('name');
+        // }
+
+        // let hi2 = () => {
+        //     console.log('hi2');
+        // }
+
+        // function debug(obj) {
+        //     // Logic
+        //     console.log(obj);
+        // }
+
+        // DRY - Dont repeat yourself.
+
+        // function pure(a, b) {
+        //     return a + b;
+        // }
+
+        // let str = 'Ivan';
+
+        // function hello(msg) {
+        //     let h1 = 'Header'
+        //     return str + ' ' + msg + ' ' + h1;
+        // }
+
+        // let person = {
+        //     name: 'Ivan',
+        //     age: 25,
+        //     isMale: true,
+        //     hello: function(msg) {
+        //         console.log(`${this.name} : ${msg}`);
+        //     }
+        // };
+
+        // console.log(person.name);
+        // console.log(person['age']);
+        // person.hello('dot access');
+        // person['hello']('[] access');
+
+        // person.name = 'Kate';
+        // console.log(person.name);
+        // person.hello('dot access');
+
+        // person.color = 'red';
+        // person['car'] = 'bmw';
+
+        // request.user = {
+        //     name: 'ivan'
+        // };
+
+        // console.log(person);
+        // delete person.age;
+        // console.log(person);
+
+        // function hello() {
+        //     console.log(this);
+        // }
+
+        // hello();
+
+        // let person = {
+        //     name: 'Ivan',
+        //     age: 25,
+        //     isMale: true,
+        //     hello: msg => {
+        //         console.log(`${this.name} : ${msg}`);
+        //     }
+        // };
+
+        // person.hello('Array function');
+
+        // let car = {
+        //     name: 'bmw',
+        //     drive: function() {
+        //         let engine = () => {
+        //             return this.name;
+        //         }
+        //         console.log(engine());
+        //     }
+        // };
+
+        // car.drive();
+
+        // let btn = document.querySelector('.btnClick');
+        // // btn.onclick = function() {
+        // //     console.log(this.classList);
+        // // }
+
+        // btn.onclick = e => {
+        //     console.log('Hello');
+        // }
+
+        // function Point(x, y) {
+        //     this.x0 = x;
+        //     this.y0 = y;
+
+        //     // this.distance = function() {
+        //     //     return Math.sqrt(this.x0**2 + this.y0**2);
+        //     // }
+        // }
+
+        // function Car() {
+        //     this.model = '';
+        //     this.year = '';
+        //     this.color = '';
+        // }
+
+        // Point.prototype.distance = function() {
+        //     return Math.sqrt(this.x0**2 + this.y0**2);
+        // }
+
+        // let p1 = new Point(100, 150);
+
+        // console.log(p1);
+        // console.log(p1.distance());
+
+        // Array.prototype.hello = function() {
+        //     console.log('hello');
+        // }
+
+        // let arr = [1, 2, 3];
+        // arr.hello();
+
+        // Array.prototype.generateRandomNumbers = function (value) {
+        //     for (let i = 0; i < this.length; i++) {
+        //         this[i] = Math.floor(Math.random() * value);
+        //     }
+        // }
+
+        // arr.generateRandomNumbers(100);
+
+        // console.log(arr);
+
+        // let person = {
+        //     name: 'Ivan',
+        //     age: 25,
+        //     isMale: true
+        // };
+
+        // let p2 = {
+        //     name: 'Kate',
+        //     age: 25,
+        //     isMale: true
+        // }
+
+        // console.log(p3);
+
+        // JSON - JavaScript Object Notation
+
+        let person = {
+            name: 'Ivan',
+            age: 25,
+            isMale: true
+        };
+
+        let str = '{"name":"Ivan","age":25,"isMale":true}';
+
+        let data = {
+            items: [
+                {
+                    name: "ivan",
+                    color: "red",
+                    count: 3
+                },
+                {
+                    name: "sergey",
+                    color: "green",
+                    count: 3
+                },
+                {
+                    name: "kate",
+                    color: "blue",
+                    count: 3
+                }
+            ],
+            theme: 'dark',
+            user: {
+                name: 'asd123',
+                token: 'asdfarw4234wer',
+                role: 'admin'
+            }
+        };
+
+        let strJSON = JSON.stringify(data, null, 4);
+
+        console.log(strJSON);
+
+        let obj = JSON.parse(strJSON);
+
+        console.log(obj.items[1]);
+        console.log(obj.user.name, obj.user.role);
+
+    </script>
+</body>
+</html>
