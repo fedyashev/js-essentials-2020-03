@@ -1,0 +1,36 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 576px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid lightgreen;
+    border-radius: 4px;
+    background: lightslategray;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.box__active {
+    background: lightsalmon;
+}
+
+.box__active_click {
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-shuffle</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function shuffle(word) {
+            let arr = Array(word.length).fill().map((item, index) => index);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== i) {
+                    continue;
+                }
+
+                let k = null;
+
+                while (true) {
+                    k = Math.floor(Math.random() * arr.length);
+                    if  (arr[i] !== k && arr[k] !== i) {
+                        let tmp = arr[i];
+                        arr[i] = arr[k];
+                        arr[k] = tmp;
+                        break;
+                    }
+                }
+            }
+            let str = '';
+            for (let i = 0; i < arr.length; i++) {
+                str += word[arr[i]];
+            }
+            return str;
+        }
+
+        let word = prompt('Enter word:').trim();
+
+        console.log(word);
+        console.log(shuffle(word));
+
+    </script>
+</body>
+</html>

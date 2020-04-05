@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        function Contact(id, name, phone) {
+            this.id = id;
+            this.name = name;
+            this.phone = phone;
+        }
+
+        function ContactList() {
+            this.id = 0;
+            this.contactList = [];
+        }
+
+        ContactList.prototype.addContact = function(name, phone) {
+            this.id++;
+            const contact = new Contact(this.id, name, phone);
+            this.contactList.push(contact);
+        }
+
+        ContactList.prototype.findContactsByName = function(name) {
+            const arr = this.contactList.filter(contact => {
+                return contact.name === name;
+            });
+            return arr;
+        }
+
+        const list = new ContactList();
+        list.addContact('Ivan', '123-45-67');
+        list.addContact('Kate', '888-99-00');
+        list.addContact('Ivan', '456-87-12');
+        console.log(list.contactList);
+
+        const mas = list.findContactsByName('Ivan');
+        console.log(mas);
+
+    </script>
+</body>
+</html>
