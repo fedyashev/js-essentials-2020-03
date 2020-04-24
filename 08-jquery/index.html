@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="logo" style="width: 100px; height: 40px; background: #035544;"></div>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="menu" style="height: 40px; background: lightgoldenrodyellow;"></div>
+                </div>
+                <div class="col-auto">
+                    <div class="menu-social" style="width: 50px; height: 40px; background: lightpink;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Text</p>
+                    <input type="button" value="Menu" class="btnMenu">
+                    <div class="menu--nav">
+                        <div class="menu-menu_side_ru-container">
+                            <ul id="menu-menu_side_ru" class="menu-side--container">
+                                <li id="menu-item-206"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206"><a
+                                        href="http://aser.by/o-kompanii/">О компании</a></li>
+                                <li id="menu-item-181"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-181 active">
+                                    <a href="http://aser.by/uslugi/">Услуги</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-185"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-185">
+                                            <a href="http://aser.by/uslugi/biznes-planirovanie/">Бизнес-планирование</a>
+                                        </li>
+                                        <li id="menu-item-667"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667">
+                                            <a href="http://aser.by/uslugi/issledovaniya-i-analitika/">Исследования и
+                                                аналитика</a>
+                                        </li>
+                                        <li id="menu-item-666"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666">
+                                            <a href="http://aser.by/uslugi/m-a-i-ocenka-biznesa/">M&amp;A и оценка
+                                                бизнеса</a></li>
+                                        <li id="menu-item-665"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665">
+                                            <a href="http://aser.by/uslugi/privlechenie-finansirovaniya/">Привлечение
+                                                финансирования</a></li>
+                                        <li id="menu-item-664"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-664">
+                                            <a href="http://aser.by/uslugi/soprovozhdenie-proektov-v-pvt/">Сопровождение
+                                                проектов в
+                                                ПВТ</a></li>
+                                        <li id="menu-item-663"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663">
+                                            <a href="https://aser.by/uslugi/infrastrukturnye-proekty/">Инфраструктурные
+                                                проекты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-882"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-882"><a
+                                        href="http://aser.by/komanda/">Команда</a></li>
+                                <li id="menu-item-1188"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
+                                    <a href="https://aser.by/klienty/">Клиенты</a></li>
+                                <li id="menu-item-483"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-483"><a
+                                        href="http://aser.by/press-centr/">Пресс-центр</a></li>
+                                <li id="menu-item-208"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a
+                                        href="http://aser.by/kontakty/">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="test-form">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form action="">
+                        <div class="form-control">
+                            <input type="text" class="form-text">
+                        </div>
+                        <div>
+                            <input type="button" value="Show" class="btnShow">
+                        </div>
+                    </form>
+                    <div class="result" data-time="900">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
