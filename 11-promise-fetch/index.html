@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="expenses pt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#all" role="tab"
+                                aria-controls="home" aria-selected="true">Все расходы</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#create" role="tab"
+                                aria-controls="profile" aria-selected="false">Создать</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#update" role="tab"
+                                aria-controls="contact" aria-selected="false">Редактировать</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#delete" role="tab"
+                                aria-controls="contact" aria-selected="false">Удалить</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="home-tab">
+                            <h2>Get All</h2>
+                            <button class="btn btn-primary" id="btnGetExpenses">Get expenses</button>
+                            <div id="table-placeholder"></div>
+                        </div>
+                        <div class="tab-pane fade" id="create" role="tabpanel" aria-labelledby="profile-tab">
+                            <h2>Create</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputCreate">Create Expense</label>
+                                    <input type="text" class="form-control" id="inputCreate">
+                                </div>
+                                <button id="btnCreate" class="btn btn-primary">Create</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="update" role="tabpanel" aria-labelledby="contact-tab">
+                            <h2>Update</h2>
+                        </div>
+                        <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="contact-tab">
+                            <h2>Delete</h2>
+                            <button class="btn btn-primary" id="btnGetExpensesForDelete">Get expenses</button>
+                            <div id="table-delete-placeholder"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src='./js/api.js'></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
